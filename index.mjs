@@ -68,7 +68,7 @@ function convertToX12(json) {
 }
 
 export const handler = async (event, context) => {
-  const body = JSON.parse(event.body);
+  const body = event.body;
 
   return {
     status: "success",
