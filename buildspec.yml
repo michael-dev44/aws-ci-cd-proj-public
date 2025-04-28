@@ -15,7 +15,7 @@ phases:
   post_build:
     commands:
       - echo "Updating lambda Function..."
-      #- aws lambda update-function-code --function-name postMock837Claims --zip-file fileb://nodejs.zip
+      - aws lambda update-function-code --function-name postMock837Claims --zip-file fileb://nodejs.zip
       - echo "DONE!!"
       - echo Build started on `date`
 artifacts:
