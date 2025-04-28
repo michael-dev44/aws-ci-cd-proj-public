@@ -69,7 +69,7 @@ function convertToX12(json) {
 
 export const handler = async (event, context) => {
   const body = event.body;
-
+  console.log("Hello world");
   return {
     status: "success",
     message: "Mock 837 claim successfully created.",
