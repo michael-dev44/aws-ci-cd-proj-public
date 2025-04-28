@@ -11,13 +11,13 @@ phases:
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - echo "Zipping deployment package..."
-      - cd lib
-      - zip -r9 ../deployment_package.zip .
-      - cd ..
-      - zip -g deployment_package.zip test.js
+      - zip -r nodejs.zip node_modules test.js
   post_build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name postMock837Claims --zip-file fileb://deployment_package.zip
+      - aws lambda update-function-code --function-name postMock837Claims --zip-file fileb://nodejs.zip
       - echo "DONE!!"
       - echo Build started on `date`
+artifacts:
+  files:
+    - nodejs.zip
