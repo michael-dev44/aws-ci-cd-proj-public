@@ -6,10 +6,6 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - npm install
-      #- npm test
-  test:
-    commands:
-      - echo "Running tests..."
       - npm test
   build:
     commands:
