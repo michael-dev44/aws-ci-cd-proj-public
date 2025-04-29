@@ -66,7 +66,7 @@ function convertToX12(json) {
     IEA,
   ].join("\n");
 }
-
+module.exports = convertToX12;
 export const handler = async (event, context) => {
   const body = event.body;
   console.log("Hello world");
