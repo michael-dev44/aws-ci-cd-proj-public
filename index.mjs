@@ -1,6 +1,6 @@
 import moment from "moment";
 
-function convertToX12(json) {
+export function convertToX12(json) {
   const { provider, patient, claim_details, payer } = json;
 
   const now = moment();
@@ -66,7 +66,7 @@ function convertToX12(json) {
     IEA,
   ].join("\n");
 }
-module.exports = convertToX12;
+
 export const handler = async (event, context) => {
   const body = event.body;
   console.log("Hello world");
@@ -75,7 +75,5 @@ export const handler = async (event, context) => {
     message: "Mock 837 claim successfully created.",
     "test x12 data": convertToX12(body),
     claim_id: "mock-837-123456789",
-    x12_claim_data:
-      "ISA*00* *00* *ZZ*1234567890 *ZZ*9876543210 *030101*1010*U*00401*000000001*0*P*... (X12 content)",
   };
 };

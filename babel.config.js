@@ -1,3 +1,3 @@
 const presets = [["@babel/preset-env"]];
 
-module.exports = { presets };
+export default { presets };

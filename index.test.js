@@ -1,4 +1,4 @@
-const convertToX12 = require("./index.mjs");
+import { convertToX12 } from "./index.mjs";
 const json = {
   provider: {
     provider_name: "Dr. John Doe",
