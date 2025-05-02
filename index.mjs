@@ -73,7 +73,7 @@ export const handler = async (event, context) => {
   return {
     status: "success",
     message: "Mock 837 claim successfully created.",
-    "test x12 data": convertToX12(body),
+    x12Claim: convertToX12(body),
     claim_id: "mock-837-123456789",
   };
 };
